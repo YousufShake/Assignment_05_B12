@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap");
+
+body {
+  font-family: "Tiro Bangla", serif;
+}
+
+@media screen and (max-width: 576px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #Hero-Section img {
+    width: 30px;
+    height: 30px;
+  }
+  #Hero-Section p:nth-child(2) {
+    font-size: 20px;
+  }
+  #Hero-Section p:nth-child(3) {
+    font-size: 15px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  #Card-Section {
+    display: flex; 
+    flex-direction: column;
+  }
+
+  #Card-Section > div:nth-child(4) {
+    order: -1;
+  }
+}
