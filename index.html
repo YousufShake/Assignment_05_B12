@@ -34,17 +34,17 @@
           <div
             class="bg-[#ecfff0] rounded-3xl w-[123px] h-[52px] flex justify-center items-center gap-3"
           >
-            <p id="count"class="font-bold text-[20px]">0</p>
+            <p id="heart_count"class="font-bold text-[20px]">0</p>
             <img  src="./assets/heart.png" alt="" class="w-[30px] h-[30px]" />
           </div>
           <div
             class="bg-[#ecfff0] rounded-3xl w-[123px] h-[52px] flex justify-center items-center gap-3"
           >
-            <p class="font-bold text-[20px]">100</p>
+            <p id="count" class="font-bold text-[20px]">100</p>
             <img src="./assets/coin.png" alt="" class="w-[30px] h-[30px]" />
           </div>
           <div
-            class="bg-[#00a63e] rounded-3xl w-[123px] h-[52px] flex justify-center items-center"
+            class="bg-[#00a63e] rounded-3xl w-[123px] h-[52px] flex justify-center items-center copy-count-box "
           >
             <p class="font-bold text-[20px] text-white">0 Copy</p>
           </div>
@@ -88,7 +88,7 @@
               <p class="text-[18px] text-gray-500">National Emergency</p>
             </div>
             <div>
-              <h1 class="text-[24px] font-bold">999</h1>
+              <h1 class="text-[24px] font-bold service-number ">999</h1>
               <div class="w-[130px] p-2 bg-[#f2f2f2] rounded-3xl">
                 <p class="text-[18px] text-gray-500">সার্বজনীন</p>
               </div>
@@ -102,7 +102,7 @@
                 </button>
               </div>
               <div
-                class="w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
+                class=" call-button w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
               >
                 <button class="cursor-pointer flex items-center gap-2">
                   <i class="fa-solid fa-phone"></i> Call
@@ -132,7 +132,7 @@
               <p class="text-[18px] text-gray-500">Police</p>
             </div>
             <div>
-              <h1 class="text-[24px] font-bold">999</h1>
+              <h1 class="text-[24px] font-bold service-number">999</h1>
               <div class="w-[130px] p-2 bg-[#f2f2f2] rounded-3xl">
                 <p class="text-[18px] text-gray-500">পুলিশ</p>
               </div>
@@ -146,7 +146,7 @@
                 </button>
               </div>
               <div
-                class="w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
+                class=" call-button w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
               >
                 <button class="cursor-pointer flex items-center gap-2">
                   <i class="fa-solid fa-phone"></i> Call
@@ -176,7 +176,7 @@
               <p class="text-[18px] text-gray-500">Fire Service</p>
             </div>
             <div>
-              <h1 class="text-[24px] font-bold">999</h1>
+              <h1 class="text-[24px] font-bold service-number ">999</h1>
               <div class="w-[130px] p-2 bg-[#f2f2f2] rounded-3xl">
                 <p class="text-[18px] text-gray-500">ফায়ার</p>
               </div>
@@ -190,7 +190,7 @@
                 </button>
               </div>
               <div
-                class="w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
+                class=" call-button w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
               >
                 <button class="cursor-pointer flex items-center gap-2">
                   <i class="fa-solid fa-phone"></i> Call
@@ -200,46 +200,23 @@
           </div>
           <div
             class="bg-white p-5 rounded-2xl flex flex-col gap-5 row-span-3 shadow-lg hover:shadow-xl card"
+            id="callHistory"
           >
-            <div class="flex justify-between items-center">
-              <div
-                class="bg-[#FFE3E2] h-[60px] w-[60px] rounded-2xl flex justify-center items-center"
-              >
-                <img
-                  src="./assets/emergency.png"
-                  alt="emergency"
-                  class="h-[32px] w-[32px]"
-                />
-              </div>
-              <i
-                class="fa-regular fa-heart heart-icon text-[30px] cursor-pointer transform transition duration-300 hover:scale-130 active:scale-95 hover:text-red-600"
-              ></i>
-            </div>
-            <div>
-              <h1 class="text-[24px] font-bold">জাতীয় জরুরি সেবা</h1>
-              <p class="text-[18px] text-gray-500">National Emergency</p>
-            </div>
-            <div>
-              <h1 class="text-[24px] font-bold">999</h1>
-              <div class="w-[130px] p-2 bg-[#f2f2f2] rounded-3xl">
-                <p class="text-[18px] text-gray-500">সার্বজনীন</p>
-              </div>
-            </div>
-            <div class="flex gap-3">
-              <div
-                class="w-[182.33px] border-2 border-[#d4d6d5] rounded-2xl flex justify-center py-1 text-gray-600 cursor-pointer hover:bg-gray-300 transition duration-300"
-              >
-                <button class="cursor-pointer flex items-center gap-2">
-                  <i class="fa-solid fa-copy"></i> Copy
+            <div id="call-history" class="py-5">
+              <div class="flex justify-between items-center mb-5">
+                <h2 class="text-[24px] font-semibold">
+                  <i class="fa-regular fa-clock"></i> Call History
+                </h2>
+                <button
+                  id="clear-history"
+                  class="bg-[#00a63e] text-white py-3 px-8 rounded-3xl hover:bg-green-800 transition duration-300 cursor-pointer font-semibold"
+                >
+                  Clear
                 </button>
               </div>
-              <div
-                class="w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
-              >
-                <button class="cursor-pointer flex items-center gap-2">
-                  <i class="fa-solid fa-phone"></i> Call
-                </button>
-              </div>
+              <ul id="history-list" class="list-none p-0 space-y-3">
+                <!-- Call history items will be dynamically added here -->
+              </ul>
             </div>
           </div>
           <div
@@ -264,7 +241,7 @@
               <p class="text-[18px] text-gray-500">Ambulance</p>
             </div>
             <div>
-              <h1 class="text-[24px] font-bold">1994-999999</h1>
+              <h1 class="text-[24px] font-bold service-number">1994-999999</h1>
               <div class="w-[130px] p-2 bg-[#f2f2f2] rounded-3xl">
                 <p class="text-[18px] text-gray-500">স্বাস্থ্য</p>
               </div>
@@ -278,7 +255,7 @@
                 </button>
               </div>
               <div
-                class="w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
+                class=" call-button w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
               >
                 <button class="cursor-pointer flex items-center gap-2">
                   <i class="fa-solid fa-phone"></i> Call
@@ -308,7 +285,7 @@
               <p class="text-[18px] text-gray-500">Women & Child Helpline</p>
             </div>
             <div>
-              <h1 class="text-[24px] font-bold">109</h1>
+              <h1 class="text-[24px] font-bold service-number ">109</h1>
               <div class="w-[130px] p-2 bg-[#f2f2f2] rounded-3xl">
                 <p class="text-[18px] text-gray-500">সহায়তা</p>
               </div>
@@ -322,7 +299,7 @@
                 </button>
               </div>
               <div
-                class="w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
+                class="call-button w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
               >
                 <button class="cursor-pointer flex items-center gap-2">
                   <i class="fa-solid fa-phone"></i> Call
@@ -352,7 +329,7 @@
               <p class="text-[18px] text-gray-500">Anti-Corruption</p>
             </div>
             <div>
-              <h1 class="text-[24px] font-bold">106</h1>
+              <h1 class="text-[24px] font-bold service-number ">106</h1>
               <div class="w-[130px] p-2 bg-[#f2f2f2] rounded-3xl">
                 <p class="text-[18px] text-gray-500">সরকারি</p>
               </div>
@@ -366,7 +343,7 @@
                 </button>
               </div>
               <div
-                class="w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
+                class=" call-button w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
               >
                 <button class="cursor-pointer flex items-center gap-2">
                   <i class="fa-solid fa-phone"></i> Call
@@ -396,21 +373,21 @@
               <p class="text-[18px] text-gray-500">Electricity Outage</p>
             </div>
             <div>
-              <h1 class="text-[24px] font-bold">16216</h1>
+              <h1 class="text-[24px] font-bold service-number ">16216</h1>
               <div class="w-[130px] p-2 bg-[#f2f2f2] rounded-3xl">
                 <p class="text-[18px] text-gray-500">বিদ্যুৎ</p>
               </div>
             </div>
             <div class="flex gap-3">
               <div
-                class="w-[182.33px] border-2 border-[#d4d6d5] rounded-2xl flex justify-center py-1 text-gray-600 cursor-pointer hover:bg-gray-300 transition duration-300"
+                class=" w-[182.33px] border-2 border-[#d4d6d5] rounded-2xl flex justify-center py-1 text-gray-600 cursor-pointer hover:bg-gray-300 transition duration-300"
               >
                 <button class="cursor-pointer flex items-center gap-2">
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
               </div>
               <div
-                class="w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
+                class="call-button w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
               >
                 <button class="cursor-pointer flex items-center gap-2">
                   <i class="fa-solid fa-phone"></i> Call
@@ -440,21 +417,21 @@
               <p class="text-[18px] text-gray-500">Brac</p>
             </div>
             <div>
-              <h1 class="text-[24px] font-bold">16445</h1>
+              <h1 class="text-[24px] font-bold service-number ">16445</h1>
               <div class="w-[130px] p-2 bg-[#f2f2f2] rounded-3xl">
                 <p class="text-[18px] text-gray-500">এনজিও</p>
               </div>
             </div>
             <div class="flex gap-3">
               <div
-                class="w-[182.33px] border-2 border-[#d4d6d5] rounded-2xl flex justify-center py-1 text-gray-600 cursor-pointer hover:bg-gray-300 transition duration-300"
+                class=" w-[182.33px] border-2 border-[#d4d6d5] rounded-2xl flex justify-center py-1 text-gray-600 cursor-pointer hover:bg-gray-300 transition duration-300"
               >
                 <button class="cursor-pointer flex items-center gap-2">
                   <i class="fa-solid fa-copy"></i> Copy
                 </button>
               </div>
               <div
-                class="w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
+                class="call-button w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
               >
                 <button class="cursor-pointer flex items-center gap-2">
                   <i class="fa-solid fa-phone"></i> Call
@@ -484,7 +461,7 @@
               <p class="text-[18px] text-gray-500">Bangladesh Railway</p>
             </div>
             <div>
-              <h1 class="text-[24px] font-bold">163</h1>
+              <h1 class="text-[24px] font-bold service-number ">163</h1>
               <div class="w-[130px] p-2 bg-[#f2f2f2] rounded-3xl">
                 <p class="text-[18px] text-gray-500">পরিবহন</p>
               </div>
@@ -498,7 +475,7 @@
                 </button>
               </div>
               <div
-                class="w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
+                class=" call-button w-[182.33px] bg-[#00a63e] rounded-2xl flex justify-center py-1 text-white cursor-pointer hover:bg-green-950 transition duration-300"
               >
                 <button class="cursor-pointer flex items-center gap-2">
                   <i class="fa-solid fa-phone"></i> Call
